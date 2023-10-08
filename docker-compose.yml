@@ -32,4 +32,12 @@ services:
     ports:
       - 8080:8080
       - 50000:50000
-    
+      
+networks:
+  jenkins:
+    driver: bridge
+  
+volumes:
+  docker-certs-ca:
+  docker-certs-client:
+  jenkins-data:
