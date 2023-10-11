@@ -4,6 +4,8 @@ services:
     image: docker:dind
     privileged: true
     user: root
+    expose:
+      -2376
     environment: 
       DOCKER_TLS_CERTDIR: /certs
     volumes:
@@ -32,6 +34,8 @@ services:
     ports:
       - 8080:8080
       - 50000:50000
+    networks:
+      - jenkins
       
 networks:
   jenkins:
