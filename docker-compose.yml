@@ -5,7 +5,7 @@ services:
     privileged: true
     user: root
     expose:
-      -2376
+      - 2376
     environment: 
       DOCKER_TLS_CERTDIR: /certs
     volumes:
@@ -36,7 +36,7 @@ services:
       - 50000:50000
     networks:
       - jenkins
-      
+
 networks:
   jenkins:
     driver: bridge
